@@ -1,28 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  //  components/common/
+  import Scroll from 'components/common/better-scroll/Scroll'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+
+  export default {
+    name: 'App',
+    components: {
+      Scroll
+    },
+    data(){
+      return {
+        // banners:[],
+        // recommends:[],
+      }
+    },
+    // created() {
+    //   //生命周期函数请求所有数据
+    //   gitHomeMultidata().then(res => {
+    //     console.log(res);
+    //     this.banners  = res.data.banner.list;
+    //     this.recommends =res.data.recommend.list;
+    //   })
+    // }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "./assets/css/base.css";
 </style>
